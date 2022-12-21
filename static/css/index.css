@@ -76,7 +76,7 @@ th {
 }
 
 tr {
-    line-height: 100px;
+    line-height: 50px;
 }
 
 .right {
@@ -109,5 +109,13 @@ tr {
 }
 
 .mybtn {
-    width: 100%;
+    width: 120px;
+}
+
+form {
+     text-align: center;
+}
+
+.pyt {
+    background-color: cyan;
 }
