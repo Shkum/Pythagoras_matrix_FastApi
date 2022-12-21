@@ -1,0 +1,113 @@
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+h2 {
+    color: green;
+    text-align: center;
+}
+
+body {background-color: burlywood}
+
+input[type=text], input[type=date] {
+    width: 30%;
+    padding: 12px 20px;
+    margin : 0 auto;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 4px;
+    font-size: 25px;
+}
+
+label {
+    font-size: 30px;
+}
+
+button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+h3 {
+    font-size: 20px;
+}
+div form {
+    text-align: center;
+
+}
+
+table {
+    text-align: center;
+    font-size: 30px;
+    margin: auto;
+    border: 3px solid grey;
+    border-collapse: separate;
+    border-spacing: 10px 20px;
+    width: 700px;
+}
+
+
+td {
+    padding: 10px 15px;
+    border: 1px solid grey;
+}
+
+th {
+    padding: 10px 15px;
+    border: 1px solid grey;
+}
+
+tr {
+    line-height: 100px;
+}
+
+.right {
+    padding-left: 80%;
+}
+.tbl {
+    width: 50px;
+}
+
+.col {
+    color: red;
+    font-style: italic;
+}
+
+.dia1 {
+    color: green;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.dia2 {
+    color:  blue;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.str {
+    color: darkorange;
+    font-style: italic;
+}
+
+.mybtn {
+    width: 100%;
+}

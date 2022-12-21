@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block add_css%}
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/index.css') }}">
+{% endblock %}
+
+{% block title%}
+    Pythagoras Matrix
+{% endblock %}
+
+{% block content%}
+{%  include 'head.html' %}
+
+<br>
+<form>
+  <div>
+    <label for="bday">Enter your birthday date</label>
+      <br>
+    <input type="date" id="bday" name="bday" min="1800-01-01" max="2500-31-12" required>
+    <span class="validity"></span>
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+{% endblock %}

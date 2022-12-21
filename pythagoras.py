@@ -1,9 +1,9 @@
 class Pythagoras:
     def __init__(self, b_day, b_month, b_year):
         self.variables = {}
-        self.b_day = b_day
-        self.b_month = b_month
-        self.b_year = b_year
+        self.b_day = str(b_day)
+        self.b_month = str(b_month)
+        self.b_year = str(b_year)
         self.nums = self.get_pythagoras()
 
     def get_pythagoras(self):

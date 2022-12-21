@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+
+{% block add_css%}
+
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/index.css') }}">
+{% endblock %}
+
+{% block title%}
+    Pythagoras Matrix
+{% endblock %}
+
+{% block content%}
+{%  include 'head.html' %}
+
+    <h1>{{ info }}</h1>
+
+  <body>
+
+    <table>
+    <tr>
+       <td rowspan="3"></td>
+      <td  class="tbl"><input class="mybtn" type="submit" value="{{ nums.0 }}" name="ones"></td>
+      <td class="tbl">{{ nums.3 }}</td>
+      <td class="tbl">{{ nums.6 }}</td>
+      <td class="tbl str">000</td>
+    </tr>
+    <tr>
+        <td class="tbl">{{ nums.1 }}</td>
+        <td class="tbl">{{ nums.4 }}</td>
+        <td class="tbl">{{ nums.7 }}</td>
+        <td class="tbl str">000</td>
+    </tr>
+    <tr>
+      <td class="tbl">{{ nums.2 }}</td>
+      <td class="tbl">{{ nums.5 }}</td>
+      <td class="tbl">{{ nums.8 }}</td>
+      <td class="tbl str">000</td>
+    </tr>
+    <tr>
+      <td class="tbl dia1">000</td>
+      <td class="tbl col">000</td>
+      <td class="tbl col">000</td>
+      <td class="tbl col">000</td>
+      <td class="tbl dia2">000</td>
+    </tr>
+  </table>
+
+ </body>
+{% endblock %}
