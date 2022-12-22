@@ -23,7 +23,7 @@ async def read_item(request: Request, bday: Optional[str] = None):
     context = {
         "request": request,
         'nums': pythagoras.nums,
-        'variables': pythagoras.variables,
+        'var': pythagoras.variables,
         'info': 'Pythagoras Matrix',
     }
     return templates.TemplateResponse("index.html", context)
