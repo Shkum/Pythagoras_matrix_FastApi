@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Optional
 
-from db import database, about_info
+from db import database
 from pythagoras import Pythagoras
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
@@ -16,7 +16,6 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 
-
 @app.on_event("startup")
 async def startup():
     await database.connect()
@@ -29,8 +28,9 @@ async def shutdown():
 
 @app.get("/", response_class=HTMLResponse)
 async def read_item(request: Request, bday: Optional[str] = None):
-    query = about_info.select()
-    result = await database.fetch_all(query)
+    query = "SELECT info_en FROM about_info WHERE name='about_my'"
+    results = await database.fetch_all(query=query)
+    result = str(*results[0])
     if bday is None:
         return templates.TemplateResponse("home.html", {"request": request})
     dte = datetime.strptime(bday, '%Y-%m-%d').date()

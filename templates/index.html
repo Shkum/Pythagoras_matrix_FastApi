@@ -47,12 +47,14 @@
   </table>
 
     <div class="descr">
-    <label for="res">Description</label>
-    <br>
-    <input type="text" id="res">
+        <br>
+     <p>
+     <input type="text" name="text" id="text_text" type="number" />
+    </p>
+   <input type="submit" onclick="document.getElementById('text_text').value='{{ result }}'; return false;" value = "send" />
+
     </div>
-
-  {{ result }}
-
+    <br>
+{{ result }}
  </body>
 {% endblock %}
