@@ -6,6 +6,7 @@ if __name__ == '__main__':
         'app:app',
         port=8000,
         host='localhost',
+        log_level="debug",
         reload=True
     )
 

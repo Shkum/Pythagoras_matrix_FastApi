@@ -8,43 +8,20 @@ h2 {
     text-align: center;
 }
 
-body {background-color: burlywood}
+body {background-color: #9fcdff}
 
 input[type=text], input[type=date] {
     width: 30%;
     padding: 12px 20px;
     margin : 0 auto;
     box-sizing: border-box;
-    border: 2px solid red;
+    border: 2px solid orchid;
     border-radius: 4px;
     font-size: 25px;
 }
 
 label {
     font-size: 30px;
-}
-
-button {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-}
-
-button:hover {background-color: #3e8e41}
-
-button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
 }
 h3 {
     font-size: 20px;
@@ -80,32 +57,46 @@ tr {
 }
 
 .right {
-    padding-left: 80%;
+    width: 120px;
+    height: 30px;
+    border: 1px solid #999;
+    font-size: 18px;
+    color: #1c87c9;
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 4px 4px #ccc;
+  position: absolute;
+  right: 10px;
 }
+
 .tbl {
     width: 50px;
 }
 
 .col {
-    color: red;
+    color: #efa2a9;
     font-style: italic;
+    background-color: darkgreen;
 }
 
 .dia1 {
     color: green;
     font-style: italic;
     font-weight: bold;
+    background-color: #ffc107;
 }
 
 .dia2 {
     color:  blue;
     font-style: italic;
     font-weight: bold;
+    background-color: #ffc107;
 }
 
 .str {
     color: darkorange;
     font-style: italic;
+    background-color: darkgreen;
 }
 
 .mybtn {
@@ -118,4 +109,31 @@ form {
 
 .pyt {
     background-color: cyan;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.descr {
+    text-align: center;
 }

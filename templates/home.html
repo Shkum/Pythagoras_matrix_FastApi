@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 
 {% block add_css%}
-    <link rel="stylesheet" href="{{ url_for('static', path='/css/bootstrap.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', path='/css/index.css') }}">
+
 {% endblock %}
 
 {% block title%}
@@ -15,14 +14,19 @@
 <br>
 <form>
   <div>
-    <label for="bday">Select your birthday date:</label>
+        <label>Enter your name:</label>
+      <br>
+        <input type="text" id="bname" required>
+      <br>
+      <br>
+        <label for="bday">Enter your birthday date:</label>
       <br>
     <input type="date" id="bday" name="bday" min="1800-01-01" max="2500-31-12" required>
     <span class="validity"></span>
   </div>
     <br>
   <div>
-    <input type="submit">
+    <input type="submit" class="button">
   </div>
 </form>
 

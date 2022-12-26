@@ -3,8 +3,6 @@
 
 {% block add_css%}
 
-    <link rel="stylesheet" href="{{ url_for('static', path='/css/bootstrap.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', path='/css/index.css') }}">
 {% endblock %}
 
 {% block title%}
@@ -21,33 +19,40 @@
     <table>
     <tr>
        <td rowspan="3"></td>
-      <td class="pyt"><input class="mybtn tbl" type="submit" value="{{ nums.0 }}" name="first" title="1"></td>
-      <td class="pyt"><input class="mybtn tbl" type="submit" value="{{ nums.3 }}" name="forth" title="4"></td>
-      <td class="pyt"><input class="mybtn tbl" type="submit" value="{{ nums.6 }}" name="seventh" title="7"></td>
-      <td><input class="mybtn tbl str" type="submit" value="{{ var.first_line }}"</td>
+      <td class="pyt"><input class="mybtn tbl" type="submit" value="{{ nums.0 }}" name="first" title="One - character"></td>
+      <td class="pyt"><input class="mybtn tbl" type="submit" value="{{ nums.3 }}" name="forth" title="Fore - health"></td>
+      <td class="pyt"><input class="mybtn tbl" type="submit" value="{{ nums.6 }}" name="seventh" title="Seven - luck"></td>
+      <td class="str"><input class="mybtn tbl" type="submit" value="{{ var.first_line }}" title="purposefulness"></td>
 
     </tr>
     <tr>
-        <td class="pyt"><input class="mybtn tbl" type="submit" value="{{ nums.1 }}" name="second" title="2"></td>
-        <td class="pyt"><input class="mybtn tbl" type="submit" value="{{ nums.4 }}" name="fifth" title="5"></td>
-        <td class="pyt"><input class="mybtn tbl" type="submit" value="{{ nums.7 }}" name="eighth" title="8"></td>
-        <td><input class="mybtn tbl str" type="submit" value="{{ var.second_line }}"></td>
+        <td class="pyt"><input class="mybtn tbl" type="submit" value="{{ nums.1 }}" name="second" title="Two - energetic"></td>
+        <td class="pyt"><input class="mybtn tbl" type="submit" value="{{ nums.4 }}" name="fifth" title="Five - logic"></td>
+        <td class="pyt"><input class="mybtn tbl" type="submit" value="{{ nums.7 }}" name="eighth" title="Eight - duty"></td>
+        <td class="str"><input class="mybtn tbl" type="submit" value="{{ var.second_line }}" title="family"></td>
     </tr>
     <tr>
-        <td class="pyt"><input class="mybtn tbl" type="submit" value="{{ nums.2 }}" name="third" title="3"></td>
-        <td class="pyt"><input class="mybtn tbl" type="submit" value="{{ nums.5 }}" name="sixth" title="6"></td>
-        <td class="pyt"><input class="mybtn tbl" type="submit" value="{{ nums.8 }}" name="ninth" title="9"></td>
-        <td><input class="mybtn tbl str" type="submit" value="{{ var.third_line }}"></td>
+        <td class="pyt"><input class="mybtn tbl" type="submit" value="{{ nums.2 }}" name="third" title="Three - science"></td>
+        <td class="pyt"><input class="mybtn tbl" type="submit" value="{{ nums.5 }}" name="sixth" title="Six - skills"></td>
+        <td class="pyt"><input class="mybtn tbl" type="submit" value="{{ nums.8 }}" name="ninth" title="Nine - memory"></td>
+        <td class="str"><input class="mybtn tbl" type="submit" value="{{ var.third_line }}" title="habits and attachment"></td>
     </tr>
     <tr>
-        <td><input class="mybtn tbl dia1" type="submit" value="000" name="firstdiag"></td>
-        <td><input class="mybtn tbl col" type="submit" value="{{ var.first_col }}" name="firstcolumn"></td>
-        <td><input class="mybtn tbl col" type="submit" value="{{ var.second_col }}" name="secondcolumn"></td>
-        <td><input class="mybtn tbl col" type="submit" value="{{ var.third_col }}" name="thirdcolumn"></td>
-        <td><input class="mybtn tbl dia2" type="submit" value="000" name="seconddiag"></td>
-
+        <td class="dia1"><input class="mybtn tbl" type="submit" value="{{ var.diagonal_up }}" name="diagonal_up" title="carnal interests"></td>
+        <td class="col"><input class="mybtn tbl" type="submit" value="{{ var.first_col }}" name="firstcolumn" title="self-esteem"></td>
+        <td class="col"><input class="mybtn tbl" type="submit" value="{{ var.second_col }}" name="secondcolumn" title="material well-being"></td>
+        <td class="col"><input class="mybtn tbl" type="submit" value="{{ var.third_col }}" name="thirdcolumn" title="talent"></td>
+        <td class="dia2"><input class="mybtn tbl" type="submit" value="{{ var.diagonal_down }}" name="diagonal_down" title="spiritual interests"></td>
     </tr>
   </table>
+
+    <div class="descr">
+    <label for="res">Description</label>
+    <br>
+    <input type="text" id="res">
+    </div>
+
+  {{ result }}
 
  </body>
 {% endblock %}
