@@ -137,3 +137,17 @@ form {
 .descr {
     text-align: center;
 }
+
+.lb {
+    font-size: 120%;
+    margin: 10px;
+    white-space: pre-wrap;
+}
+
+.inf {
+      font-size: 14px;
+}
+
+.align_left {
+    text-align: left;
+}

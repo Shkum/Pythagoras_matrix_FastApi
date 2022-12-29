@@ -1,20 +1,16 @@
 {% extends 'base.html' %}
-
 {% block add_css%}
-
 {% endblock %}
-
 {% block title%}
     Pythagoras Matrix
 {% endblock %}
 
 {% block content%}
-{%  include 'head.html' %}
 
-<br>
 <form>
+   {%  include 'head.html' %}
   <div>
-        <label>Enter your name:</label>
+        <label for="bname">Enter your name:</label>
       <br>
         <input type="text" id="bname" required>
       <br>
