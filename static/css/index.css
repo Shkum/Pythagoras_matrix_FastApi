@@ -1,5 +1,5 @@
 h1 {
-    color: blue;
+    color: #0b2e13;
     text-align: center;
 }
 
@@ -8,7 +8,11 @@ h2 {
     text-align: center;
 }
 
-body {background-color: #9fcdff}
+.cent{
+    text-align: center;
+}
+
+body {background-color: #6c757d}
 
 input[type=text], input[type=date] {
     width: 30%;
@@ -19,6 +23,9 @@ input[type=text], input[type=date] {
     border-radius: 4px;
     font-size: 25px;
 }
+
+
+
 
 label {
     font-size: 30px;
@@ -71,36 +78,51 @@ tr {
 
 .tbl {
     width: 50px;
+    font-size: 24px;
 }
+
+.tbl1 {
+    font-weight: bold;
+    font-size: 34px;
+}
+
 
 .col {
     color: #efa2a9;
     font-style: italic;
-    background-color: darkgreen;
+    background-color: #1c7430;
 }
 
 .dia1 {
     color: green;
     font-style: italic;
     font-weight: bold;
-    background-color: #ffc107;
+    background-color: #005cbf;
 }
 
 .dia2 {
     color:  blue;
     font-style: italic;
     font-weight: bold;
-    background-color: #ffc107;
+    background-color: #005cbf;
 }
 
 .str {
     color: darkorange;
     font-style: italic;
-    background-color: darkgreen;
+    background-color: #1c7430;
 }
 
 .mybtn {
     width: 120px;
+    height: 60px;
+}
+
+.mybtn1 {
+    width: 140px;
+    height: 150px;
+    white-space: normal;
+    font-size: 18px;
 }
 
 form {
@@ -108,7 +130,13 @@ form {
 }
 
 .pyt {
-    background-color: cyan;
+    background-color: #dc3545;
+
+
+}
+
+.emb {
+    background-color: #721c24;
 }
 
 .button {
@@ -120,16 +148,16 @@ form {
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: #4CAF50;
+  background-color: #4e555b;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
 }
 
-.button:hover {background-color: #3e8e41}
+.button:hover {background-color: #5a6268}
 
 .button:active {
-  background-color: #3e8e41;
+  background-color: #818182;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
@@ -139,15 +167,78 @@ form {
 }
 
 .lb {
-    font-size: 120%;
-    margin: 10px;
+    font-size: 140%;
+    margin: 20px;
     white-space: pre-wrap;
+    text-align: justify;
 }
 
 .inf {
       font-size: 14px;
+    text-align: left;
 }
 
 .align_left {
     text-align: left;
+}
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+.btn-5 {
+    width: 260px;
+    height: 140px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: #5a6268;
+    font-size: 26px;
+    /*background: rgb(255,27,0);*/
+    /*background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);*/
+}
+.btn-5:hover {
+  color: #343a40;
+  background: transparent;
+   box-shadow:none;
+}
+.btn-5:before,
+.btn-5:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #f0094a;
+  box-shadow:
+   -1px -1px 5px 0px #fff,
+   7px 7px 20px 0px #0003,
+   4px 4px 5px 0px #0002;
+  transition:400ms ease all;
+}
+.btn-5:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.btn-5:hover:before,
+.btn-5:hover:after{
+  width:100%;
+  transition:800ms ease all;
 }

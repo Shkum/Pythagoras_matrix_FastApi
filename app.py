@@ -68,6 +68,7 @@ async def read_item(
             'info': diff[23],
         }
         return templates.TemplateResponse("home.html", context)
+
     dte = datetime.strptime(bday, '%Y-%m-%d').date()
     pythagoras = Pythagoras(dte.day, dte.month, dte.year)
 
@@ -85,7 +86,7 @@ async def read_item(
 
     context = {
 
-        'about_compability': abt[0],
+        'about_compatibility': abt[0],
         'about_my': abt[1],
         'about_general': abt[2],
 
@@ -119,14 +120,21 @@ async def read_item(
         'second_string': diff[27],
         'third_string': diff[28],
         'one_char': diff[29],
-        'two_enrgy': diff[30],
+        'two_energy': diff[30],
         'three_science': diff[31],
-        'four_health': diff[32],
+        'four_health': diff[32].replace('&apos;', "'"),
         'five_logic': diff[33],
         'six_skills': diff[34],
         'seven_luck': diff[35],
         'eight_duty': diff[36],
-        'nine_memory': diff[37],
+        'nine_memory': diff[37].replace('&apos;', "'"),
+        'about_dev': diff[38],
+        'about_author': diff[39],
+        'about_compat': diff[40],
+        'gen_info_name': diff[41],
+        'comp_calc': diff[42],
+        'back_home': diff[43],
+        'm_click': diff[44],
 
         'butt1': butt1,
         'butt2': butt2,
