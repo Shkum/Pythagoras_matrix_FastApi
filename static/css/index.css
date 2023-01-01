@@ -21,14 +21,14 @@ input[type=text], input[type=date] {
     box-sizing: border-box;
     border: 2px solid orchid;
     border-radius: 4px;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 
 
 
 label {
-    font-size: 30px;
+    font-size: 20px;
 }
 h3 {
     font-size: 20px;
@@ -40,31 +40,31 @@ div form {
 
 table {
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     margin: auto;
     border: 3px solid grey;
     border-collapse: separate;
-    border-spacing: 10px 20px;
-    width: 700px;
+    border-spacing: 5px 10px;
+    width: 500px;
 }
 
 
 td {
-    padding: 10px 15px;
+    padding: 5px 10px;
     border: 1px solid grey;
 }
 
 th {
-    padding: 10px 15px;
+    padding: 5px 10px;
     border: 1px solid grey;
 }
 
 tr {
-    line-height: 50px;
+    line-height: 30px;
 }
 
 .right {
-    width: 120px;
+    width: 150px;
     height: 30px;
     border: 1px solid #999;
     font-size: 18px;
@@ -77,13 +77,13 @@ tr {
 }
 
 .tbl {
-    width: 50px;
-    font-size: 24px;
+    width: 30px;
+    font-size: 20px;
 }
 
 .tbl1 {
     font-weight: bold;
-    font-size: 34px;
+    font-size: 28px;
 }
 
 
@@ -115,12 +115,12 @@ tr {
 
 .mybtn {
     width: 120px;
-    height: 60px;
+    height: 55px;
 }
 
 .mybtn1 {
     width: 120px;
-    height: 150px;
+    height: 120px;
     white-space: normal;
     font-size: 16px;
 }

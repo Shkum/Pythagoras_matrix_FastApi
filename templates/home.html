@@ -10,12 +10,12 @@
 <form>
    {%  include 'head.html' %}
   <div>
-        <label for="bname">Enter your name:</label>
+        <label for="bname" id="testid" >{{enter_name}}:</label>
       <br>
         <input type="text" id="bname" required>
       <br>
       <br>
-        <label for="bday">Enter your birthday date:</label>
+        <label for="bday">{{enter_birthday}}:</label>
       <br>
     <input type="date" id="bday" name="bday" min="1800-01-01" max="2500-31-12" required>
     <span class="validity"></span>
@@ -25,4 +25,6 @@
     <input type="submit" class="button" id="btn" value="SHOW">
   </div>
 </form>
+
+
 {% endblock %}

@@ -1,9 +1,10 @@
 from datetime import datetime
 from typing import Optional
 
+
 from db import database
 from pythagoras import Pythagoras
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, Cookie
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -24,13 +25,43 @@ async def startup():
 async def shutdown():
     await database.disconnect()
 
+#
+# @app.get("/{lng}", response_class=HTMLResponse)
+# async def lang(request: Request, lng: str):
+#     redirect_url = request.url_for('index')
+#     print(lng)
+#     return RedirectResponse(redirect_url + f'&lang={lng}',  status_code=status.HTTP_303_SEE_OTHER)
+#
 
 @app.get("/", response_class=HTMLResponse)
-async def read_item(
+async def index(
         request: Request,
         lang: Optional[str] = None,
         bday: Optional[str] = None
 ):
+
+
+
+    if bday is None:
+        lang_id = request.cookies['formData'][-1]
+        print(lang_id)
+        if lang_id is not None:
+            lang_dict = {'0': 'en', '1': 'de', '2': 'ua', '3': 'ru'}
+            diff = f"SELECT info_{lang_dict[str(lang_id)]} FROM different_info"
+            diff = await database.fetch_all(query=diff)
+            diff = [item[0] for item in diff]
+
+        context = {
+            "request": request,
+            'lang': lang,
+            'info': diff[23],
+            'enter_name': diff[45].replace('&apos;', "'"),
+            'enter_birthday': diff[46]
+
+        }
+        return templates.TemplateResponse("home.html", context)
+
+
     if lang:
         abt = f"SELECT info_{lang} FROM about_info"
         diff = f"SELECT info_{lang} FROM different_info"
@@ -56,18 +87,15 @@ async def read_item(
 
     gen = await database.fetch_all(query=gen)
     gen = [item[0] for item in gen]
+    gen = '<br><br>'.join(gen)
 
     lines = await database.fetch_all(query=lines)
     lines = [item[0] for item in lines]
 
 
-    if bday is None:
-        context = {
-            "request": request,
-            'lang': lang,
-            'info': diff[23],
-        }
-        return templates.TemplateResponse("home.html", context)
+
+
+
 
     dte = datetime.strptime(bday, '%Y-%m-%d').date()
     pythagoras = Pythagoras(dte.day, dte.month, dte.year)
@@ -147,15 +175,17 @@ async def read_item(
         'butt9': butt9,
 
 
-        'gen1': gen[0],
-        'gen2': gen[1],
-        'gen3': gen[2],
-        'gen4': gen[3],
-        'gen5': gen[4],
-        'gen6': gen[5],
-        'gen7': gen[6],
-        'gen8': gen[7],
-        'gen9': gen[8],
+        # 'gen1': gen[0],
+        # 'gen2': gen[1],
+        # 'gen3': gen[2],
+        # 'gen4': gen[3],
+        # 'gen5': gen[4],
+        # 'gen6': gen[5],
+        # 'gen7': gen[6],
+        # 'gen8': gen[7],
+        # 'gen9': gen[8],
+
+        'gen': gen,
 
         'horizontal_1': lines[0],
         'horizontal_2': lines[1],
