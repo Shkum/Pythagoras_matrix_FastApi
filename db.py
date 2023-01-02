@@ -1,7 +1,7 @@
 
 from databases import Database
 
-database = Database("sqlite:///pythagoras.db")
+database = Database("sqlite:///Pythagoras.db")
 
 
 
