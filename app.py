@@ -43,7 +43,10 @@ async def index(
 
 
     if bday is None:
-        lang_id = request.cookies['formData'][-1]
+        if request.cookies:
+            lang_id = request.cookies['formData'][-1]
+        else:
+            lang_id = 0
         print(lang_id)
         if lang_id is not None:
             lang_dict = {'0': 'en', '1': 'de', '2': 'ua', '3': 'ru'}
