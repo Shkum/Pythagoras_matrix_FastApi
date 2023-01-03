@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link href="{{ url_for('static', path='/bootstrap.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', path='/index.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', path='/base.css') }}" rel="stylesheet" >
-
 <head>
+    <link href="{{ url_for('static', path='/css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='/css/index.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='/css/base.css') }}" rel="stylesheet" >
     <meta charset="UTF-8">
+
+
 
     <title> {% block title%} {% endblock %} </title>
 
@@ -13,7 +14,7 @@
 
 </head>
 <body>
-
+    {{ url_for('static', path='/css/index.css') }}
     {% block content%} {% endblock %}
 
 </body>

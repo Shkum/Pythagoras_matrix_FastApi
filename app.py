@@ -1,18 +1,16 @@
 from datetime import datetime
 from typing import Optional
 
-
 from db import database
 from pythagoras import Pythagoras
-from fastapi import FastAPI, Request, Cookie
+from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 app = FastAPI()
 
-app.mount("/static/css", StaticFiles(directory="static/css"), name="static")
-
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 templates = Jinja2Templates(directory="templates")
 
@@ -25,6 +23,7 @@ async def startup():
 @app.on_event("shutdown")
 async def shutdown():
     await database.disconnect()
+
 
 #
 # @app.get("/{lng}", response_class=HTMLResponse)
@@ -40,9 +39,6 @@ async def index(
         lang: Optional[str] = None,
         bday: Optional[str] = None
 ):
-
-
-
     if bday is None:
         if request.cookies:
             lang_id = request.cookies['formData'][-1]
@@ -64,7 +60,6 @@ async def index(
 
         }
         return templates.TemplateResponse("home.html", context)
-
 
     if lang:
         abt = f"SELECT info_{lang} FROM about_info"
@@ -96,14 +91,8 @@ async def index(
     lines = await database.fetch_all(query=lines)
     lines = [item[0] for item in lines]
 
-
-
-
-
-
     dte = datetime.strptime(bday, '%Y-%m-%d').date()
     pythagoras = Pythagoras(dte.day, dte.month, dte.year)
-
 
     butt1 = full[pythagoras.nums[0]]
     butt2 = full[pythagoras.nums[1]] if len(pythagoras.nums[1]) else full['2-0']
@@ -114,7 +103,6 @@ async def index(
     butt7 = full[pythagoras.nums[6]] if len(pythagoras.nums[6]) else full['7-0']
     butt8 = full[pythagoras.nums[7]] if len(pythagoras.nums[7]) else full['8-0']
     butt9 = full[pythagoras.nums[8]]
-
 
     context = {
 
@@ -177,7 +165,6 @@ async def index(
         'butt7': butt7,
         'butt8': butt8,
         'butt9': butt9,
-
 
         # 'gen1': gen[0],
         # 'gen2': gen[1],
