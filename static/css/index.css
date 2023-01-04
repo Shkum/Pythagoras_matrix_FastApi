@@ -59,7 +59,7 @@ table {
 
 td {
     padding: 5px 10px;
-    border: 2px solid orange;
+    border: 2px solid black;
 }
 
 th {
@@ -85,7 +85,7 @@ tr {
 }
 
 .tbl {
-    width: 30px;
+    width: 120px;
     font-size: 20px;
 }
 
@@ -138,7 +138,7 @@ form {
 }
 
 .pyt {
-    background-color: #dc3545;
+    background-color: #491217;
 
 
 }
@@ -146,6 +146,8 @@ form {
 .emb {
     background-color: #721c24;
 }
+
+/*BUTTON ON HOME PAGE*/
 
 .button {
   display: inline-block;
@@ -167,7 +169,7 @@ form {
 .button:active {
   background-color: #818182;
   box-shadow: 0 5px #666;
-  transform: translateY(4px);
+  transform: translateY(6px);
 }
 
 .descr {
@@ -194,6 +196,11 @@ form {
     font-size: 130%;
 }
 
+
+
+/*BUTTONS AROUND TABLE*/
+
+
 .custom-btn {
   width: 130px;
   height: 40px;
@@ -212,14 +219,15 @@ form {
    4px 4px 5px 0px rgba(0,0,0,.1);
     outline: none;
 }
+
 .btn-5 {
-    width: 260px;
+    width: 200px;
     height: 140px;
     line-height: 42px;
     padding: 0;
     border: none;
     background: #5a6268;
-    font-size: 22px;
+    font-size: 20px;
     /*background: rgb(255,27,0);*/
     /*background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);*/
 }
@@ -253,4 +261,42 @@ form {
 .btn-5:hover:after{
   width:100%;
   transition:800ms ease all;
+}
+
+
+
+/*TABLE BUTTONS*/
+
+.buttontbl {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #80bdff;
+  background-color: #4e555b;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #80bdff;
+}
+
+.buttontbl:hover {background-color: #0c5460}
+
+.buttontbl:active {
+  background-color: #4e555b;
+  box-shadow: 0 3px #666;
+  transform: translateY(3px);
+}
+
+
+
+
+.btnheight {
+    width: 120px;
+    height: 150px;
+    white-space: normal;
+    font-size: 16px;
+  padding: 1px 1px;
 }
