@@ -269,7 +269,7 @@ form {
 
 .buttontbl {
   display: inline-block;
-  padding: 15px 25px;
+  padding: 15px 1px;
   font-size: 24px;
   cursor: pointer;
   text-align: center;

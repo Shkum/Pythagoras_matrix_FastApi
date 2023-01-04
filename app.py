@@ -20,7 +20,6 @@ app.mount(
     name="static",
 )
 
-
 templates = Jinja2Templates(directory="templates")
 
 
@@ -103,15 +102,17 @@ async def index(
     dte = datetime.strptime(bday, '%Y-%m-%d').date()
     pythagoras = Pythagoras(dte.day, dte.month, dte.year)
 
-    butt1 = full[pythagoras.nums[0]]
-    butt2 = full[pythagoras.nums[1]] if len(pythagoras.nums[1]) else full['2-0']
-    butt3 = full[pythagoras.nums[2]] if len(pythagoras.nums[2]) else full['3-0']
-    butt4 = full[pythagoras.nums[3]] if len(pythagoras.nums[3]) else full['4-0']
-    butt5 = full[pythagoras.nums[4]] if len(pythagoras.nums[4]) else full['5-0']
-    butt6 = full[pythagoras.nums[5]] if len(pythagoras.nums[5]) else full['6-0']
-    butt7 = full[pythagoras.nums[6]] if len(pythagoras.nums[6]) else full['7-0']
-    butt8 = full[pythagoras.nums[7]] if len(pythagoras.nums[7]) else full['8-0']
-    butt9 = full[pythagoras.nums[8]]
+    p = pythagoras.nums
+
+    butt1 = full[p[0]] if len(p[0]) < 6 else full['111111']
+    butt2 = full['2-0'] if len(p[1]) == 0 else full[p[1]] if len(p[1]) < 4 else full['2222']
+    butt3 = full['3-0'] if len(p[2]) == 0 else full[p[2]] if len(p[2]) < 4 else full['3333']
+    butt4 = full['4-0'] if len(p[3]) == 0 else full[p[3]] if len(p[3]) < 2 else full['44']
+    butt5 = full['5-0'] if len(p[4]) == 0 else full[p[4]] if len(p[4]) < 3 else full['555']
+    butt6 = full['6-0'] if len(p[5]) == 0 else full[p[5]] if len(p[5]) < 3 else full['666']
+    butt7 = full['7-0'] if len(p[6]) == 0 else full[p[6]] if len(p[6]) < 3 else full['777']
+    butt8 = full['8-0'] if len(p[7]) == 0 else full[p[7]] if len(p[7]) < 2 else full['88']
+    butt9 = full[p[8]] if len(p[8]) < 3 else full['999']
 
     context = {
 
