@@ -1,6 +1,13 @@
 h1 {
     color: #0b2e13;
     text-align: center;
+    font-size: 340%;
+}
+
+h6 {
+    color: #721c24;
+    text-align: center;
+    font-size: 140%;
 }
 
 h2 {
@@ -174,7 +181,7 @@ form {
 }
 
 .inf {
-      font-size: 14px;
+    font-size: 120%;
     text-align: left;
 }
 
