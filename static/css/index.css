@@ -19,7 +19,7 @@ h2 {
     text-align: center;
 }
 
-body {background-color: #6c757d}
+body {background-color: #818182}
 
 input[type=text], input[type=date] {
     width: 30%;
@@ -174,19 +174,20 @@ form {
 }
 
 .lb {
-    font-size: 140%;
-    margin: 20px;
+    font-size: 180%;
+    margin: 1%;
     white-space: pre-wrap;
     text-align: justify;
 }
 
 .inf {
-    font-size: 120%;
+    font-size: 140%;
     text-align: left;
 }
 
 .align_left {
     text-align: left;
+    font-size: 130%;
 }
 
 .custom-btn {
