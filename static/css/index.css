@@ -183,8 +183,10 @@ form {
 }
 
 .inf {
-    font-size: 140%;
+    color: #721c24;
+    font-size: 100%;
     text-align: left;
+    font-weight: bold;
 }
 
 .align_left {
