@@ -41,7 +41,8 @@ async def shutdown():
 #     return RedirectResponse(redirect_url + f'&lang={lng}',  status_code=status.HTTP_303_SEE_OTHER)
 #
 
-@app.get("/", response_class=HTMLResponse)
+# @app.get("/", response_class=HTMLResponse)
+@app.get("/")
 async def index(
         request: Request,
         lang: Optional[str] = None,
@@ -64,7 +65,8 @@ async def index(
             'lang': lang,
             'info': diff[23],
             'enter_name': diff[45].replace('&apos;', "'"),
-            'enter_birthday': diff[46]
+            'enter_birthday': diff[46],
+            'show_calc': diff[47]
 
         }
         return templates.TemplateResponse("home.html", context)
@@ -98,13 +100,15 @@ async def index(
 
     lines = await database.fetch_all(query=lines)
     lines = [item[0] for item in lines]
-
-    dte = datetime.strptime(bday, '%Y-%m-%d').date()
+    try:
+        dte = datetime.strptime(bday, '%Y-%m-%d').date()
+    except:
+        return {'Message': 'Wrong date entered!'}
     pythagoras = Pythagoras(dte.day, dte.month, dte.year)
 
     p = pythagoras.nums
 
-    butt1 = full[p[0]] if len(p[0]) < 6 else full['111111']
+    butt1 = full['1'] if len(p[0]) == 0 else full[p[0]] if len(p[0]) < 6 else full['111111']
     butt2 = full['2-0'] if len(p[1]) == 0 else full[p[1]] if len(p[1]) < 4 else full['2222']
     butt3 = full['3-0'] if len(p[2]) == 0 else full[p[2]] if len(p[2]) < 4 else full['3333']
     butt4 = full['4-0'] if len(p[3]) == 0 else full[p[3]] if len(p[3]) < 2 else full['44']
@@ -112,7 +116,7 @@ async def index(
     butt6 = full['6-0'] if len(p[5]) == 0 else full[p[5]] if len(p[5]) < 3 else full['666']
     butt7 = full['7-0'] if len(p[6]) == 0 else full[p[6]] if len(p[6]) < 3 else full['777']
     butt8 = full['8-0'] if len(p[7]) == 0 else full[p[7]] if len(p[7]) < 2 else full['88']
-    butt9 = full[p[8]] if len(p[8]) < 3 else full['999']
+    butt9 = full['9'] if len(p[8]) == 0 else full[p[8]] if len(p[8]) < 3 else full['999']
 
     context = {
 
