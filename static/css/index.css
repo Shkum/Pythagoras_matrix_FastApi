@@ -23,7 +23,10 @@ h6 {
     text-align: center;
 }
 
-body {background-color: #b9bbbe}
+body {
+    background-color: #b9bbbe;
+background: top/100% fixed url("/static/img/img.jpg");
+}
 
 input[type=text], input[type=date] {
     width: 30%;
