@@ -182,6 +182,7 @@ form {
 }
 
 .lb {
+    position: page;
     width: 95%;
     font-size: 250%;
     margin: 1%;
