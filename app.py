@@ -66,8 +66,9 @@ async def index(
             'info': diff[23],
             'enter_name': diff[45].replace('&apos;', "'"),
             'enter_birthday': diff[46],
-            'show_calc': diff[47]
-
+            'show_calc': diff[47],
+            'calc_table': diff[6],
+            # 'messages': ['TEST-TEST']
         }
         return templates.TemplateResponse("home.html", context)
 

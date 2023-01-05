@@ -4,42 +4,42 @@ h1 {
     font-size: 340%;
 }
 
+h2 {
+    color: green;
+    text-align: center;
+}
+
+h3 {
+    font-size: 20px;
+}
+
 h6 {
     color: #721c24;
     text-align: center;
     font-size: 140%;
 }
 
-h2 {
-    color: green;
-    text-align: center;
-}
-
 .cent{
     text-align: center;
 }
 
-body {background-color: #818182}
+body {background-color: #b9bbbe}
 
 input[type=text], input[type=date] {
     width: 30%;
     padding: 12px 20px;
     margin : 0 auto;
     box-sizing: border-box;
-    border: 2px solid orchid;
+    border: 2px solid black;
     border-radius: 4px;
     font-size: 20px;
 }
 
 
-
-
 label {
     font-size: 20px;
 }
-h3 {
-    font-size: 20px;
-}
+
 div form {
     text-align: center;
 
@@ -74,14 +74,15 @@ tr {
 .right {
     width: 150px;
     height: 30px;
-    border: 1px solid #999;
+    border: 2px solid #999;
     font-size: 18px;
-    color: #1c87c9;
+    color: darkblue;
     background-color: #eee;
     border-radius: 5px;
     box-shadow: 4px 4px #ccc;
-  position: absolute;
-  right: 10px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
 }
 
 .tbl {
@@ -138,13 +139,13 @@ form {
 }
 
 .pyt {
-    background-color: #491217;
+    background-color: #721c24;
 
 
 }
 
 .emb {
-    background-color: #721c24;
+    background-color: #491217;
 }
 
 /*BUTTON ON HOME PAGE*/
@@ -186,13 +187,14 @@ form {
 }
 
 .inf {
-    color: #721c24;
+    color: black;
     font-size: 100%;
     text-align: left;
     font-weight: bold;
 }
 
 .align_left {
+    top: 5px;
     text-align: left;
     font-size: 130%;
 }
@@ -205,7 +207,7 @@ form {
 .custom-btn {
     width: 130px;
     height: 40px;
-    color: #fff;
+    color: #b9bbbe;
     border-radius: 5px;
     padding: 10px 25px;
     font-family: 'Lato', sans-serif;
@@ -276,7 +278,7 @@ form {
   text-align: center;
   text-decoration: none;
   outline: none;
-  color: #80bdff;
+  color: #b9bbbe;
   background-color: #4e555b;
   border: none;
   border-radius: 15px;
