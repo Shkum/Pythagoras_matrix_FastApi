@@ -26,6 +26,7 @@ h6 {
 body {
     background-color: #b9bbbe;
 background: top/100% fixed url("/static/img/img.jpg");
+        min-width: 1230px;
 }
 
 input[type=text], input[type=date] {
@@ -182,12 +183,14 @@ form {
 }
 
 .lb {
-    position: page;
+    position: static ;
     width: 95%;
     font-size: 250%;
     margin: 1%;
     white-space: pre-wrap;
     text-align: justify;
+    font-weight: bold;
+
 }
 
 .inf {
