@@ -19,20 +19,19 @@ h6 {
     font-size: 140%;
 }
 
-.cent{
+.cent {
     text-align: center;
 }
 
 body {
-    background-color: #b9bbbe;
-background: top/100% fixed url("/static/img/img.jpg");
-        min-width: 1230px;
+    background: top/100% fixed url("/static/img/img.jpg");
+    min-width: 1230px;
 }
 
 input[type=text], input[type=date] {
     width: 30%;
     padding: 12px 20px;
-    margin : 0 auto;
+    margin: 0 auto;
     box-sizing: border-box;
     border: 2px solid black;
     border-radius: 4px;
@@ -114,7 +113,7 @@ tr {
 }
 
 .dia2 {
-    color:  blue;
+    color: blue;
     font-style: italic;
     font-weight: bold;
     background-color: #005cbf;
@@ -139,7 +138,7 @@ tr {
 }
 
 form {
-     text-align: center;
+    text-align: center;
 }
 
 .pyt {
@@ -155,27 +154,29 @@ form {
 /*BUTTON ON HOME PAGE*/
 
 .button {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #4e555b;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4e555b;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
     width: 400px;
 }
 
-.button:hover {background-color: #5a6268}
+.button:hover {
+    background-color: #5a6268
+}
 
 .button:active {
-  background-color: #818182;
-  box-shadow: 0 5px #666;
-  transform: translateY(6px);
+    background-color: #818182;
+    box-shadow: 0 5px #666;
+    transform: translateY(6px);
 }
 
 .descr {
@@ -183,7 +184,7 @@ form {
 }
 
 .lb {
-    position: static ;
+    position: static;
     width: 95%;
     font-size: 250%;
     margin: 1%;
@@ -207,7 +208,6 @@ form {
 }
 
 
-
 /*BUTTONS AROUND TABLE*/
 
 
@@ -224,9 +224,9 @@ form {
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
-    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-    7px 7px 20px 0px rgba(0,0,0,.1),
-    4px 4px 5px 0px rgba(0,0,0,.1);
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+    7px 7px 20px 0px rgba(0, 0, 0, .1),
+    4px 4px 5px 0px rgba(0, 0, 0, .1);
     outline: none;
 }
 
@@ -241,66 +241,68 @@ form {
     /*background: rgb(255,27,0);*/
     /*background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);*/
 }
+
 .btn-5:hover {
-  color: #343a40;
-  background: transparent;
-   box-shadow:none;
-}
-.btn-5:before,
-.btn-5:after{
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  height:2px;
-  width:0;
-  background: #f0094a;
-  box-shadow:
-   -1px -1px 5px 0px #fff,
-   7px 7px 20px 0px #0003,
-   4px 4px 5px 0px #0002;
-  transition:400ms ease all;
-}
-.btn-5:after{
-  right:inherit;
-  top:inherit;
-  left:0;
-  bottom:0;
-}
-.btn-5:hover:before,
-.btn-5:hover:after{
-  width:100%;
-  transition:800ms ease all;
+    color: #343a40;
+    background: transparent;
+    box-shadow: none;
 }
 
+.btn-5:before,
+.btn-5:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #f0094a;
+    box-shadow: -1px -1px 5px 0px #fff,
+    7px 7px 20px 0px #0003,
+    4px 4px 5px 0px #0002;
+    transition: 400ms ease all;
+}
+
+.btn-5:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.btn-5:hover:before,
+.btn-5:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
 
 
 /*TABLE BUTTONS*/
 
 .buttontbl {
-  display: inline-block;
-  padding: 15px 1px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #b9bbbe;
-  background-color: #4e555b;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 5px #80bdff;
+    display: inline-block;
+    padding: 15px 1px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #b9bbbe;
+    background-color: #4e555b;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px #80bdff;
 }
 
-.buttontbl:hover {background-color: #0c5460}
+.buttontbl:hover {
+    background-color: #0c5460
+}
 
 .buttontbl:active {
-  background-color: #4e555b;
-  box-shadow: 0 3px #666;
-  transform: translateY(3px);
+    background-color: #4e555b;
+    box-shadow: 0 3px #666;
+    transform: translateY(3px);
 }
-
-
 
 
 .btnheight {
@@ -308,5 +310,5 @@ form {
     height: 150px;
     white-space: normal;
     font-size: 16px;
-  padding: 1px 1px;
+    padding: 1px 1px;
 }

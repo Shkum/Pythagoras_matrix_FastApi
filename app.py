@@ -11,8 +11,6 @@ from fastapi.templating import Jinja2Templates
 
 app = FastAPI()
 
-# app.mount("/static", StaticFiles(directory="static"), name="static")
-
 
 app.mount(
     "/static",
@@ -33,15 +31,6 @@ async def shutdown():
     await database.disconnect()
 
 
-#
-# @app.get("/{lng}", response_class=HTMLResponse)
-# async def lang(request: Request, lng: str):
-#     redirect_url = request.url_for('index')
-#     print(lng)
-#     return RedirectResponse(redirect_url + f'&lang={lng}',  status_code=status.HTTP_303_SEE_OTHER)
-#
-
-# @app.get("/", response_class=HTMLResponse)
 @app.get("/")
 async def index(
         request: Request,
@@ -68,7 +57,7 @@ async def index(
             'enter_birthday': diff[46],
             'show_calc': diff[47],
             'calc_table': diff[6],
-            # 'messages': ['TEST-TEST']
+            'description':diff[48].replace('&apos;', "'"),
         }
         return templates.TemplateResponse("home.html", context)
 
@@ -209,7 +198,3 @@ async def index(
     }
     return templates.TemplateResponse("index.html", context)
 
-# @app.get('/')
-# def home(day: str, month: str, year: str):
-#     pythagoras = Pythagoras(day, month, year)
-#     return {'nums': pythagoras.nums, 'variables': pythagoras.variables}

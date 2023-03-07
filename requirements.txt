@@ -3,3 +3,4 @@ uvicorn~=0.20.0
 jinja2
 SQLAlchemy~=1.4.45
 databases~=0.7.0
+aiosqlite
