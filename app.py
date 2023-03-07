@@ -159,6 +159,7 @@ async def index(
         'comp_calc': diff[42],
         'back_home': diff[43],
         'm_click': diff[44],
+        'table_description': diff[49].replace('&apos;', "'"),
 
         'butt1': butt1,
         'butt2': butt2,
